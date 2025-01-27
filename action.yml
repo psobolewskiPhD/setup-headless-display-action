@@ -92,9 +92,7 @@ runs:
       if: runner.os == 'Linux'
       shell: bash
       run: |
-        export DISPLAY=:99.0
-        echo "DISPLAY=:99.0" >> $GITHUB_ENV
-        Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+        Xvfb :0 -screen 0 1024x768x24 > /dev/null 2>&1 &
         sleep 3
 
     - name: Start window manager on Linux
