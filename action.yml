@@ -37,9 +37,7 @@ runs:
       shell: bash
       run: |
         sudo apt-get install -y \
-          libgl1 \
-          xvfb \
-          x11-xserver-utils
+          xvfb
 
     - name: Install Linux Window manager
       shell: bash
@@ -60,12 +58,10 @@ runs:
           libxcb-keysyms1 \
           libxcb-randr0 \
           libxcb-render-util0 \
-          libxcb-shape0 \
           libxcb-xfixes0 \
           libxcb-xinerama0 \
           libxcb-xinput0 \
           libxkbcommon-x11-0 \
-          mesa-utils \
           x11-utils
 
     - name: Determine OpenGL version to install on Windows
